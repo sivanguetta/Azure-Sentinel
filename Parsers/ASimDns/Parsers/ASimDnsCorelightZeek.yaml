@@ -21,6 +21,7 @@ ParserParams:
     Type: bool
     Default: false
 ParserQuery: |
+  let test = "test";
   let DNSQuery_CorelightZeek=(disabled:bool=false){
     Corelight_CL | where not(disabled)
     | where log_file_s has "dns"
