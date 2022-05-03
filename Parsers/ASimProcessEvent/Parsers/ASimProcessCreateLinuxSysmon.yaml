@@ -21,6 +21,7 @@ ParserParams:
     Type: bool
     Default: false
 ParserQuery: | 
+    let test = "test";
     let ParsedProcessEvent=(){
         Syslog
         | where not(disabled)
