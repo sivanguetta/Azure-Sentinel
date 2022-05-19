@@ -23,6 +23,17 @@ jobs:
           uses: azure/powershell@v1
           with:
              inlineScript: |
-              ls
+              $x = Get-ChildItem -Path .
+              echo "Get-ChildItem -Path ."
+              echo $x
+              $y = Get-ChildItem -Path ..
+              echo "Get-ChildItem -Path .."
+              echo $y
+              $z = Get-ChildItem -Path ".script/tests/asimTest"
+              echo "Get-ChildItem -Path .script/tests/asimTest"
+              echo $z
+              $a = Get-ChildItem -Path "./.script/tests/asimTest"
+              echo "Get-ChildItem -Path ./.script/tests/asimTest"
+              echo $a
               & ".script/tests/asimTest/convertYamlToLetStatements.ps1"
              azPSVersion: "latest"
