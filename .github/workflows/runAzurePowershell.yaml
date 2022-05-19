@@ -22,5 +22,6 @@ jobs:
         - name: 'Get resource group with PowerShell action'
           uses: azure/powershell@v1
           with:
-             inlineScript: "& '.script/tests/asimTest/convertYamlToLetStatements.ps1'"
+             run: |
+              ./.script/tests/asimTest/convertYamlToLetStatements.ps1
              azPSVersion: "latest"
