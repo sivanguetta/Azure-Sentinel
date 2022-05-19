@@ -26,14 +26,5 @@ jobs:
               echo "Get-ChildItem -Path ."
               Get-ChildItem -Path .
               $x = Get-ChildItem -Path .
-              echo $x
-              echo "Get-ChildItem -Path ../.script/tests/asimTest"
-              $z = Get-ChildItem -Path "../.script/tests/asimTest"
-              Get-ChildItem -Path "../.script/tests/asimTest"
-              echo $z
-              echo "Get-ChildItem -Path ./.script/tests/asimTest"
-              $a = Get-ChildItem -Path "./.script/tests/asimTest"
-              Get-ChildItem -Path "./.script/tests/asimTest"
-              echo $a
               & "./convertYamlToLetStatements.ps1"
              azPSVersion: "latest"
