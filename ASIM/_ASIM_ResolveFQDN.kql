@@ -1,0 +1,10 @@
+T
+| extend ExtractedHostname = column_ifexists (field,'')
+| extend SplitHostname = split(ExtractedHostname,".")
+| extend 
+    Domain = tostring(strcat_array(array_slice(SplitHostname, 1, -1), '.')),
+    FQDN = iif (array_length(SplitHostname) > 1, ExtractedHostname, ''),
+    DomainType = iif (array_length(SplitHostname) > 1, 'FQDN', '')
+| extend
+    ExtractedHostname = tostring(SplitHostname[0])    
+| project-away SplitHostname

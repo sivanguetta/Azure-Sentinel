@@ -1,0 +1,751 @@
+Testing DNS schema, 25 parsers were found
+The parser '_ASim_DnsV05' is a main parser, ignoring it
+Testing parser- '_ASim_Dns_AzureFirewallV03'
+-- Running schema test for '_ASim_Dns_AzureFirewallV03'
+invokeTest : Microsoft.Azure.OperationalInsights.Models.ErrorResponse
+Code=BadArgumentError, Message=The request had some invalid properties
+  Code=SemanticError, Message=A semantic error occurred.
+    Code=SEM0100, Message='where' operator: Failed to resolve scalar expression named 'msg_s'
+At C:\GitHub\Azure-Sentinel\.script\tests\asimTest\convertYamlToLetStatements.ps1:20 char:9
++         invokeTest $schemaTest $this.Name "schema"
++         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (:) [Write-Error], WriteErrorException
+    + FullyQualifiedErrorId : Microsoft.PowerShell.Commands.WriteErrorException,invokeTest
+
+-- Running data test for '_ASim_Dns_AzureFirewallV03'
+invokeTest : Microsoft.Azure.OperationalInsights.Models.ErrorResponse
+Code=BadArgumentError, Message=The request had some invalid properties
+  Code=SemanticError, Message=A semantic error occurred.
+    Code=SEM0100, Message='where' operator: Failed to resolve scalar expression named 'msg_s'
+At C:\GitHub\Azure-Sentinel\.script\tests\asimTest\convertYamlToLetStatements.ps1:24 char:9
++         invokeTest $dataTest  $this.Name "data"
++         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (:) [Write-Error], WriteErrorException
+    + FullyQualifiedErrorId : Microsoft.PowerShell.Commands.WriteErrorException,invokeTest
+
+Testing parser- '_ASim_Dns_CiscoUmbrellaV03'
+-- Running schema test for '_ASim_Dns_CiscoUmbrellaV03'
+  -- _ASim_Dns_CiscoUmbrellaV03 schema test done successfully
+-- Running data test for '_ASim_Dns_CiscoUmbrellaV03'
+invokeTest :
+_ASim_Dns_CiscoUmbrellaV03 data- test failed with 3 errors:
+(0) Error: 1 invalid value(s) (up to 10 listed) in 15805 records (3.61%) for field [DnsQueryTypeName] of type
+[DnsQueryTypeName]: ["Other"]
+(0) Error: 87 invalid value(s) (up to 10 listed) in 298 records (0.07%) for field [DnsQuery] of type [DnsDomain]: ["-64
+.-88.2.***","wpad.*.ameritech.com","_ldap._tcp.site-de-walldorf-ra._sites.dc._msdcs.dubn34798204a","_ldap._tcp.dc._msdc
+s.dubn34798204a","epoah03.*.bls.com","epoah03.*.ameritech.com","epoah03.*.attdns.com","wpad.*attdns.com","kfsdcwcorccne
+.*attdns.com","ykartbxgdtnwjjy.*ameritech.com"]
+(0) Error: 87 invalid value(s) (up to 10 listed) in 298 records (0.07%) for field [Domain] of type [DnsDomain]: ["-64.-
+88.2.***","wpad.*.ameritech.com","_ldap._tcp.site-de-walldorf-ra._sites.dc._msdcs.dubn34798204a","_ldap._tcp.dc._msdcs.
+dubn34798204a","epoah03.*.bls.com","epoah03.*.ameritech.com","epoah03.*.attdns.com","wpad.*attdns.com","kfsdcwcorccne.*
+attdns.com","ykartbxgdtnwjjy.*ameritech.com"]
+At C:\GitHub\Azure-Sentinel\.script\tests\asimTest\convertYamlToLetStatements.ps1:24 char:9
++         invokeTest $dataTest  $this.Name "data"
++         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (:) [Write-Error], WriteErrorException
+    + FullyQualifiedErrorId : Microsoft.PowerShell.Commands.WriteErrorException,invokeTest
+
+Testing parser- '_ASim_Dns_CorelightZeekV03'
+-- Running schema test for '_ASim_Dns_CorelightZeekV03'
+  -- _ASim_Dns_CorelightZeekV03 schema test done successfully
+-- Running data test for '_ASim_Dns_CorelightZeekV03'
+  -- _ASim_Dns_CorelightZeekV03 data test done successfully
+Testing parser- '_ASim_Dns_GcpV03'
+-- Running schema test for '_ASim_Dns_GcpV03'
+  -- _ASim_Dns_GcpV03 schema test done successfully
+-- Running data test for '_ASim_Dns_GcpV03'
+  -- _ASim_Dns_GcpV03 data test done successfully
+Testing parser- '_ASim_Dns_InfobloxNIOSV03'
+-- Running schema test for '_ASim_Dns_InfobloxNIOSV03'
+invokeTest : Microsoft.Azure.OperationalInsights.Models.ErrorResponse
+Code=BadArgumentError, Message=The request had some invalid properties
+  Code=SemanticError, Message=A semantic error occurred.
+    Code=FunctionNameError, Message=Detected multiple functions with the same name: 'InfobloxNIOS'. Resolve the
+conflict to allow these functions to be used in a query.
+At C:\GitHub\Azure-Sentinel\.script\tests\asimTest\convertYamlToLetStatements.ps1:20 char:9
++         invokeTest $schemaTest $this.Name "schema"
++         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (:) [Write-Error], WriteErrorException
+    + FullyQualifiedErrorId : Microsoft.PowerShell.Commands.WriteErrorException,invokeTest
+
+-- Running data test for '_ASim_Dns_InfobloxNIOSV03'
+invokeTest : Microsoft.Azure.OperationalInsights.Models.ErrorResponse
+Code=BadArgumentError, Message=The request had some invalid properties
+  Code=SemanticError, Message=A semantic error occurred.
+    Code=FunctionNameError, Message=Detected multiple functions with the same name: 'InfobloxNIOS'. Resolve the
+conflict to allow these functions to be used in a query.
+At C:\GitHub\Azure-Sentinel\.script\tests\asimTest\convertYamlToLetStatements.ps1:24 char:9
++         invokeTest $dataTest  $this.Name "data"
++         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (:) [Write-Error], WriteErrorException
+    + FullyQualifiedErrorId : Microsoft.PowerShell.Commands.WriteErrorException,invokeTest
+
+Testing parser- '_ASim_Dns_MicrosoftNXlogV03'
+-- Running schema test for '_ASim_Dns_MicrosoftNXlogV03'
+  -- _ASim_Dns_MicrosoftNXlogV03 schema test done successfully
+-- Running data test for '_ASim_Dns_MicrosoftNXlogV03'
+invokeTest :
+_ASim_Dns_MicrosoftNXlogV03 data- test failed with 1 errors:
+(0) Error: 1 invalid value(s) (up to 10 listed) in 781 records (78.49%) for field [DnsResponseCodeName] of type
+[DnsResponseCodeName]: ["Unassigned"]
+At C:\GitHub\Azure-Sentinel\.script\tests\asimTest\convertYamlToLetStatements.ps1:24 char:9
++         invokeTest $dataTest  $this.Name "data"
++         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (:) [Write-Error], WriteErrorException
+    + FullyQualifiedErrorId : Microsoft.PowerShell.Commands.WriteErrorException,invokeTest
+
+Testing parser- '_ASim_Dns_MicrosoftOMSV03'
+-- Running schema test for '_ASim_Dns_MicrosoftOMSV03'
+invokeTest : Microsoft.Azure.OperationalInsights.Models.ErrorResponse
+Code=BadArgumentError, Message=The request had some invalid properties
+  Code=SemanticError, Message=A semantic error occurred.
+    Code=SEM0100, Message='where' operator: Failed to resolve table or column expression named 'DnsEvents'
+At C:\GitHub\Azure-Sentinel\.script\tests\asimTest\convertYamlToLetStatements.ps1:20 char:9
++         invokeTest $schemaTest $this.Name "schema"
++         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (:) [Write-Error], WriteErrorException
+    + FullyQualifiedErrorId : Microsoft.PowerShell.Commands.WriteErrorException,invokeTest
+
+-- Running data test for '_ASim_Dns_MicrosoftOMSV03'
+invokeTest : Microsoft.Azure.OperationalInsights.Models.ErrorResponse
+Code=BadArgumentError, Message=The request had some invalid properties
+  Code=SemanticError, Message=A semantic error occurred.
+    Code=SEM0100, Message='where' operator: Failed to resolve table or column expression named 'DnsEvents'
+At C:\GitHub\Azure-Sentinel\.script\tests\asimTest\convertYamlToLetStatements.ps1:24 char:9
++         invokeTest $dataTest  $this.Name "data"
++         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (:) [Write-Error], WriteErrorException
+    + FullyQualifiedErrorId : Microsoft.PowerShell.Commands.WriteErrorException,invokeTest
+
+Testing parser- '_ASim_Dns_MicrosoftSysmonV03'
+-- Running schema test for '_ASim_Dns_MicrosoftSysmonV03'
+  -- _ASim_Dns_MicrosoftSysmonV03 schema test done successfully
+-- Running data test for '_ASim_Dns_MicrosoftSysmonV03'
+  -- _ASim_Dns_MicrosoftSysmonV03 data test done successfully
+Testing parser- '_ASim_Dns_NativeV02'
+-- Running schema test for '_ASim_Dns_NativeV02'
+invokeTest :
+_ASim_Dns_NativeV02 schema- test failed with 5 errors:
+(0) Error: Missing optional alias [Duration] aliasing existing column [DnsNetworkDuration]
+(0) Error: Missing optional alias [Process] aliasing existing column [SrcProcessName]
+(0) Error: Missing optional alias [SessionId] aliasing existing column [DnsSessionId]
+(0) Error: Missing optional alias [User] aliasing existing column [SrcUsername]
+(0) Error: Missing recommended alias [Hostname] aliasing existing column [SrcHostname]
+At C:\GitHub\Azure-Sentinel\.script\tests\asimTest\convertYamlToLetStatements.ps1:20 char:9
++         invokeTest $schemaTest $this.Name "schema"
++         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (:) [Write-Error], WriteErrorException
+    + FullyQualifiedErrorId : Microsoft.PowerShell.Commands.WriteErrorException,invokeTest
+
+-- Running data test for '_ASim_Dns_NativeV02'
+  -- _ASim_Dns_NativeV02 data test done successfully
+Testing parser- '_ASim_Dns_VectraAIV01'
+-- Running schema test for '_ASim_Dns_VectraAIV01'
+invokeTest : Microsoft.Azure.OperationalInsights.Models.ErrorResponse
+Code=BadArgumentError, Message=The request had some invalid properties
+  Code=SemanticError, Message=A semantic error occurred.
+    Code=SEM0001, Message=project-rename: Failed to resolve column reference 'hostname_s'
+At C:\GitHub\Azure-Sentinel\.script\tests\asimTest\convertYamlToLetStatements.ps1:20 char:9
++         invokeTest $schemaTest $this.Name "schema"
++         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (:) [Write-Error], WriteErrorException
+    + FullyQualifiedErrorId : Microsoft.PowerShell.Commands.WriteErrorException,invokeTest
+
+-- Running data test for '_ASim_Dns_VectraAIV01'
+invokeTest : Microsoft.Azure.OperationalInsights.Models.ErrorResponse
+Code=BadArgumentError, Message=The request had some invalid properties
+  Code=SemanticError, Message=A semantic error occurred.
+    Code=SEM0001, Message=project-rename: Failed to resolve column reference 'hostname_s'
+At C:\GitHub\Azure-Sentinel\.script\tests\asimTest\convertYamlToLetStatements.ps1:24 char:9
++         invokeTest $dataTest  $this.Name "data"
++         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (:) [Write-Error], WriteErrorException
+    + FullyQualifiedErrorId : Microsoft.PowerShell.Commands.WriteErrorException,invokeTest
+
+Testing parser- '_ASim_Dns_ZscalerZIAV04'
+-- Running schema test for '_ASim_Dns_ZscalerZIAV04'
+  -- _ASim_Dns_ZscalerZIAV04 schema test done successfully
+-- Running data test for '_ASim_Dns_ZscalerZIAV04'
+  -- _ASim_Dns_ZscalerZIAV04 data test done successfully
+The parser '_Im_DnsV05' is a main parser, ignoring it
+Testing parser- '_Im_Dns_AzureFirewallV03'
+-- Running schema test for '_Im_Dns_AzureFirewallV03'
+invokeTest : Microsoft.Azure.OperationalInsights.Models.ErrorResponse
+Code=BadArgumentError, Message=The request had some invalid properties
+  Code=SemanticError, Message=A semantic error occurred.
+    Code=SEM0100, Message='where' operator: Failed to resolve scalar expression named 'msg_s'
+At C:\GitHub\Azure-Sentinel\.script\tests\asimTest\convertYamlToLetStatements.ps1:20 char:9
++         invokeTest $schemaTest $this.Name "schema"
++         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (:) [Write-Error], WriteErrorException
+    + FullyQualifiedErrorId : Microsoft.PowerShell.Commands.WriteErrorException,invokeTest
+
+-- Running data test for '_Im_Dns_AzureFirewallV03'
+invokeTest : Microsoft.Azure.OperationalInsights.Models.ErrorResponse
+Code=BadArgumentError, Message=The request had some invalid properties
+  Code=SemanticError, Message=A semantic error occurred.
+    Code=SEM0100, Message='where' operator: Failed to resolve scalar expression named 'msg_s'
+At C:\GitHub\Azure-Sentinel\.script\tests\asimTest\convertYamlToLetStatements.ps1:24 char:9
++         invokeTest $dataTest  $this.Name "data"
++         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (:) [Write-Error], WriteErrorException
+    + FullyQualifiedErrorId : Microsoft.PowerShell.Commands.WriteErrorException,invokeTest
+
+Testing parser- '_Im_Dns_CiscoUmbrellaV03'
+-- Running schema test for '_Im_Dns_CiscoUmbrellaV03'
+  -- _Im_Dns_CiscoUmbrellaV03 schema test done successfully
+-- Running data test for '_Im_Dns_CiscoUmbrellaV03'
+invokeTest :
+_Im_Dns_CiscoUmbrellaV03 data- test failed with 3 errors:
+(0) Error: 1 invalid value(s) (up to 10 listed) in 15805 records (3.61%) for field [DnsQueryTypeName] of type
+[DnsQueryTypeName]: ["Other"]
+(0) Error: 87 invalid value(s) (up to 10 listed) in 298 records (0.07%) for field [DnsQuery] of type [DnsDomain]: ["_ld
+ap._tcp.site-de-walldorf-ra._sites.dc._msdcs.dubn34798204a","_ldap._tcp.dc._msdcs.dubn34798204a","-64.-88.2.***","wpad.
+*.ameritech.com","epoah03.*.bls.com","epoah03.*.ameritech.com","epoah03.*.attdns.com","wpad.*attdns.com","kfsdcwcorccne
+.*attdns.com","ykartbxgdtnwjjy.*ameritech.com"]
+(0) Error: 87 invalid value(s) (up to 10 listed) in 298 records (0.07%) for field [Domain] of type [DnsDomain]: ["_ldap
+._tcp.site-de-walldorf-ra._sites.dc._msdcs.dubn34798204a","_ldap._tcp.dc._msdcs.dubn34798204a","-64.-88.2.***","wpad.*.
+ameritech.com","epoah03.*.bls.com","epoah03.*.ameritech.com","epoah03.*.attdns.com","wpad.*attdns.com","kfsdcwcorccne.*
+attdns.com","ykartbxgdtnwjjy.*ameritech.com"]
+At C:\GitHub\Azure-Sentinel\.script\tests\asimTest\convertYamlToLetStatements.ps1:24 char:9
++         invokeTest $dataTest  $this.Name "data"
++         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (:) [Write-Error], WriteErrorException
+    + FullyQualifiedErrorId : Microsoft.PowerShell.Commands.WriteErrorException,invokeTest
+
+Testing parser- '_Im_Dns_CorelightZeekV03'
+-- Running schema test for '_Im_Dns_CorelightZeekV03'
+  -- _Im_Dns_CorelightZeekV03 schema test done successfully
+-- Running data test for '_Im_Dns_CorelightZeekV03'
+  -- _Im_Dns_CorelightZeekV03 data test done successfully
+Testing parser- '_Im_Dns_EmptyV03'
+-- Running schema test for '_Im_Dns_EmptyV03'
+  -- _Im_Dns_EmptyV03 schema test done successfully
+-- Running data test for '_Im_Dns_EmptyV03'
+  -- _Im_Dns_EmptyV03 data test done successfully
+Testing parser- '_Im_Dns_GcpV03'
+-- Running schema test for '_Im_Dns_GcpV03'
+  -- _Im_Dns_GcpV03 schema test done successfully
+-- Running data test for '_Im_Dns_GcpV03'
+  -- _Im_Dns_GcpV03 data test done successfully
+Testing parser- '_Im_Dns_InfobloxNIOSV03'
+-- Running schema test for '_Im_Dns_InfobloxNIOSV03'
+invokeTest : Microsoft.Azure.OperationalInsights.Models.ErrorResponse
+Code=BadArgumentError, Message=The request had some invalid properties
+  Code=SemanticError, Message=A semantic error occurred.
+    Code=FunctionNameError, Message=Detected multiple functions with the same name: 'InfobloxNIOS'. Resolve the
+conflict to allow these functions to be used in a query.
+At C:\GitHub\Azure-Sentinel\.script\tests\asimTest\convertYamlToLetStatements.ps1:20 char:9
++         invokeTest $schemaTest $this.Name "schema"
++         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (:) [Write-Error], WriteErrorException
+    + FullyQualifiedErrorId : Microsoft.PowerShell.Commands.WriteErrorException,invokeTest
+
+-- Running data test for '_Im_Dns_InfobloxNIOSV03'
+invokeTest : Microsoft.Azure.OperationalInsights.Models.ErrorResponse
+Code=BadArgumentError, Message=The request had some invalid properties
+  Code=SemanticError, Message=A semantic error occurred.
+    Code=FunctionNameError, Message=Detected multiple functions with the same name: 'InfobloxNIOS'. Resolve the
+conflict to allow these functions to be used in a query.
+At C:\GitHub\Azure-Sentinel\.script\tests\asimTest\convertYamlToLetStatements.ps1:24 char:9
++         invokeTest $dataTest  $this.Name "data"
++         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (:) [Write-Error], WriteErrorException
+    + FullyQualifiedErrorId : Microsoft.PowerShell.Commands.WriteErrorException,invokeTest
+
+Testing parser- '_Im_Dns_MicrosoftNXlogV03'
+-- Running schema test for '_Im_Dns_MicrosoftNXlogV03'
+  -- _Im_Dns_MicrosoftNXlogV03 schema test done successfully
+-- Running data test for '_Im_Dns_MicrosoftNXlogV03'
+invokeTest :
+_Im_Dns_MicrosoftNXlogV03 data- test failed with 1 errors:
+(0) Error: 1 invalid value(s) (up to 10 listed) in 781 records (78.49%) for field [DnsResponseCodeName] of type
+[DnsResponseCodeName]: ["Unassigned"]
+At C:\GitHub\Azure-Sentinel\.script\tests\asimTest\convertYamlToLetStatements.ps1:24 char:9
++         invokeTest $dataTest  $this.Name "data"
++         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (:) [Write-Error], WriteErrorException
+    + FullyQualifiedErrorId : Microsoft.PowerShell.Commands.WriteErrorException,invokeTest
+
+Testing parser- '_Im_Dns_MicrosoftOMSV03'
+-- Running schema test for '_Im_Dns_MicrosoftOMSV03'
+invokeTest : Microsoft.Azure.OperationalInsights.Models.ErrorResponse
+Code=BadArgumentError, Message=The request had some invalid properties
+  Code=SemanticError, Message=A semantic error occurred.
+    Code=SEM0100, Message='where' operator: Failed to resolve table or column expression named 'DnsEvents'
+At C:\GitHub\Azure-Sentinel\.script\tests\asimTest\convertYamlToLetStatements.ps1:20 char:9
++         invokeTest $schemaTest $this.Name "schema"
++         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (:) [Write-Error], WriteErrorException
+    + FullyQualifiedErrorId : Microsoft.PowerShell.Commands.WriteErrorException,invokeTest
+
+-- Running data test for '_Im_Dns_MicrosoftOMSV03'
+invokeTest : Microsoft.Azure.OperationalInsights.Models.ErrorResponse
+Code=BadArgumentError, Message=The request had some invalid properties
+  Code=SemanticError, Message=A semantic error occurred.
+    Code=SEM0100, Message='where' operator: Failed to resolve table or column expression named 'DnsEvents'
+At C:\GitHub\Azure-Sentinel\.script\tests\asimTest\convertYamlToLetStatements.ps1:24 char:9
++         invokeTest $dataTest  $this.Name "data"
++         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (:) [Write-Error], WriteErrorException
+    + FullyQualifiedErrorId : Microsoft.PowerShell.Commands.WriteErrorException,invokeTest
+
+Testing parser- '_Im_Dns_MicrosoftSysmonV03'
+-- Running schema test for '_Im_Dns_MicrosoftSysmonV03'
+  -- _Im_Dns_MicrosoftSysmonV03 schema test done successfully
+-- Running data test for '_Im_Dns_MicrosoftSysmonV03'
+  -- _Im_Dns_MicrosoftSysmonV03 data test done successfully
+Testing parser- '_Im_Dns_NativeV02'
+-- Running schema test for '_Im_Dns_NativeV02'
+invokeTest :
+_Im_Dns_NativeV02 schema- test failed with 3 errors:
+(0) Error: Missing optional alias [Process] aliasing existing column [SrcProcessName]
+(0) Error: Missing optional alias [User] aliasing existing column [SrcUsername]
+(0) Error: Missing recommended alias [Hostname] aliasing existing column [SrcHostname]
+At C:\GitHub\Azure-Sentinel\.script\tests\asimTest\convertYamlToLetStatements.ps1:20 char:9
++         invokeTest $schemaTest $this.Name "schema"
++         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (:) [Write-Error], WriteErrorException
+    + FullyQualifiedErrorId : Microsoft.PowerShell.Commands.WriteErrorException,invokeTest
+
+-- Running data test for '_Im_Dns_NativeV02'
+  -- _Im_Dns_NativeV02 data test done successfully
+Testing parser- '_Im_Dns_VectraAIV01'
+-- Running schema test for '_Im_Dns_VectraAIV01'
+invokeTest : Microsoft.Azure.OperationalInsights.Models.ErrorResponse
+Code=BadArgumentError, Message=The request had some invalid properties
+  Code=SemanticError, Message=A semantic error occurred.
+    Code=SEM0001, Message=project-rename: Failed to resolve column reference 'hostname_s'
+At C:\GitHub\Azure-Sentinel\.script\tests\asimTest\convertYamlToLetStatements.ps1:20 char:9
++         invokeTest $schemaTest $this.Name "schema"
++         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (:) [Write-Error], WriteErrorException
+    + FullyQualifiedErrorId : Microsoft.PowerShell.Commands.WriteErrorException,invokeTest
+
+-- Running data test for '_Im_Dns_VectraAIV01'
+invokeTest : Microsoft.Azure.OperationalInsights.Models.ErrorResponse
+Code=BadArgumentError, Message=The request had some invalid properties
+  Code=SemanticError, Message=A semantic error occurred.
+    Code=SEM0001, Message=project-rename: Failed to resolve column reference 'hostname_s'
+At C:\GitHub\Azure-Sentinel\.script\tests\asimTest\convertYamlToLetStatements.ps1:24 char:9
++         invokeTest $dataTest  $this.Name "data"
++         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (:) [Write-Error], WriteErrorException
+    + FullyQualifiedErrorId : Microsoft.PowerShell.Commands.WriteErrorException,invokeTest
+
+Testing parser- '_Im_Dns_ZscalerZIAV02'
+-- Running schema test for '_Im_Dns_ZscalerZIAV02'
+  -- _Im_Dns_ZscalerZIAV02 schema test done successfully
+-- Running data test for '_Im_Dns_ZscalerZIAV02'
+  -- _Im_Dns_ZscalerZIAV02 data test done successfully
+Testing WebSession schema, 7 parsers were found
+The parser '_ASim_WebSessionV03' is a main parser, ignoring it
+Testing parser- '_ASim_WebSession_SquidProxyV02'
+-- Running schema test for '_ASim_WebSession_SquidProxyV02'
+invokeTest :
+_ASim_WebSession_SquidProxyV02 schema- test failed with 3 errors:
+(0) Error: Missing field [SrcUsernameType] is mandatory when field [SrcUsername] exists
+(0) Error: Missing mandatory field [Dvc]
+(0) Error: type mismatch for column [DstBytes]. It is currently int and should be long
+At C:\GitHub\Azure-Sentinel\.script\tests\asimTest\convertYamlToLetStatements.ps1:20 char:9
++         invokeTest $schemaTest $this.Name "schema"
++         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (:) [Write-Error], WriteErrorException
+    + FullyQualifiedErrorId : Microsoft.PowerShell.Commands.WriteErrorException,invokeTest
+
+-- Running data test for '_ASim_WebSession_SquidProxyV02'
+invokeTest :
+_ASim_WebSession_SquidProxyV02 data- test failed with 1 errors:
+(0) Error: type mismatch for column [DstBytes]. It is currently [int] and should be [long]
+At C:\GitHub\Azure-Sentinel\.script\tests\asimTest\convertYamlToLetStatements.ps1:24 char:9
++         invokeTest $dataTest  $this.Name "data"
++         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (:) [Write-Error], WriteErrorException
+    + FullyQualifiedErrorId : Microsoft.PowerShell.Commands.WriteErrorException,invokeTest
+
+Testing parser- '_ASim_WebSession_ZscalerZIAV02'
+-- Running schema test for '_ASim_WebSession_ZscalerZIAV02'
+invokeTest :
+_ASim_WebSession_ZscalerZIAV02 schema- test failed with 4 errors:
+(0) Error: Missing mandatory field [Dst]
+(0) Error: Missing recommended alias [Hostname] aliasing existing column [DstHostname]
+(0) Error: type mismatch for column [DstBytes]. It is currently int and should be long
+(0) Error: type mismatch for column [SrcBytes]. It is currently int and should be long
+At C:\GitHub\Azure-Sentinel\.script\tests\asimTest\convertYamlToLetStatements.ps1:20 char:9
++         invokeTest $schemaTest $this.Name "schema"
++         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (:) [Write-Error], WriteErrorException
+    + FullyQualifiedErrorId : Microsoft.PowerShell.Commands.WriteErrorException,invokeTest
+
+-- Running data test for '_ASim_WebSession_ZscalerZIAV02'
+  -- _ASim_WebSession_ZscalerZIAV02 data test done successfully
+The parser '_Im_WebSessionV06' is a main parser, ignoring it
+Testing parser- '_Im_WebSession_EmptyV02'
+-- Running schema test for '_Im_WebSession_EmptyV02'
+invokeTest :
+_Im_WebSession_EmptyV02 schema- test failed with 8 errors:
+(0) Error: type mismatch for column [DstBytes]. It is currently int and should be long
+(0) Error: type mismatch for column [DstPackets]. It is currently int and should be long
+(0) Error: type mismatch for column [DstVlanId]. It is currently string and should be sting
+(0) Error: type mismatch for column [NetworkBytes]. It is currently int and should be long
+(0) Error: type mismatch for column [NetworkPackets]. It is currently int and should be long
+(0) Error: type mismatch for column [SrcBytes]. It is currently int and should be long
+(0) Error: type mismatch for column [SrcPackets]. It is currently int and should be long
+(0) Error: type mismatch for column [SrcVlanId]. It is currently string and should be sting
+At C:\GitHub\Azure-Sentinel\.script\tests\asimTest\convertYamlToLetStatements.ps1:20 char:9
++         invokeTest $schemaTest $this.Name "schema"
++         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (:) [Write-Error], WriteErrorException
+    + FullyQualifiedErrorId : Microsoft.PowerShell.Commands.WriteErrorException,invokeTest
+
+-- Running data test for '_Im_WebSession_EmptyV02'
+  -- _Im_WebSession_EmptyV02 data test done successfully
+Testing parser- '_Im_WebSession_SquidProxyV05'
+-- Running schema test for '_Im_WebSession_SquidProxyV05'
+invokeTest :
+_Im_WebSession_SquidProxyV05 schema- test failed with 3 errors:
+(0) Error: Missing field [SrcUsernameType] is mandatory when field [SrcUsername] exists
+(0) Error: Missing mandatory field [Dvc]
+(0) Error: type mismatch for column [DstBytes]. It is currently int and should be long
+At C:\GitHub\Azure-Sentinel\.script\tests\asimTest\convertYamlToLetStatements.ps1:20 char:9
++         invokeTest $schemaTest $this.Name "schema"
++         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (:) [Write-Error], WriteErrorException
+    + FullyQualifiedErrorId : Microsoft.PowerShell.Commands.WriteErrorException,invokeTest
+
+-- Running data test for '_Im_WebSession_SquidProxyV05'
+invokeTest :
+_Im_WebSession_SquidProxyV05 data- test failed with 1 errors:
+(0) Error: type mismatch for column [DstBytes]. It is currently [int] and should be [long]
+At C:\GitHub\Azure-Sentinel\.script\tests\asimTest\convertYamlToLetStatements.ps1:24 char:9
++         invokeTest $dataTest  $this.Name "data"
++         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (:) [Write-Error], WriteErrorException
+    + FullyQualifiedErrorId : Microsoft.PowerShell.Commands.WriteErrorException,invokeTest
+
+Testing parser- '_Im_WebSession_ZscalerZIAV04'
+-- Running schema test for '_Im_WebSession_ZscalerZIAV04'
+invokeTest :
+_Im_WebSession_ZscalerZIAV04 schema- test failed with 2 errors:
+(0) Error: type mismatch for column [DstBytes]. It is currently int and should be long
+(0) Error: type mismatch for column [SrcBytes]. It is currently int and should be long
+At C:\GitHub\Azure-Sentinel\.script\tests\asimTest\convertYamlToLetStatements.ps1:20 char:9
++         invokeTest $schemaTest $this.Name "schema"
++         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (:) [Write-Error], WriteErrorException
+    + FullyQualifiedErrorId : Microsoft.PowerShell.Commands.WriteErrorException,invokeTest
+
+-- Running data test for '_Im_WebSession_ZscalerZIAV04'
+  -- _Im_WebSession_ZscalerZIAV04 data test done successfully
+Testing NetworkSession schema, 25 parsers were found
+The parser '_ASim_NetworkSessionV05' is a main parser, ignoring it
+Testing parser- '_ASim_NetworkSession_AWSVPCV01'
+-- Running schema test for '_ASim_NetworkSession_AWSVPCV01'
+  -- _ASim_NetworkSession_AWSVPCV01 schema test done successfully
+-- Running data test for '_ASim_NetworkSession_AWSVPCV01'
+  -- _ASim_NetworkSession_AWSVPCV01 data test done successfully
+Testing parser- '_ASim_NetworkSession_AzureFirewallV01'
+-- Running schema test for '_ASim_NetworkSession_AzureFirewallV01'
+invokeTest : Microsoft.Azure.OperationalInsights.Models.ErrorResponse
+Code=BadArgumentError, Message=The request had some invalid properties
+  Code=SemanticError, Message=A semantic error occurred.
+    Code=SEM0100, Message='where' operator: Failed to resolve scalar expression named 'msg_s'
+At C:\GitHub\Azure-Sentinel\.script\tests\asimTest\convertYamlToLetStatements.ps1:20 char:9
++         invokeTest $schemaTest $this.Name "schema"
++         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (:) [Write-Error], WriteErrorException
+    + FullyQualifiedErrorId : Microsoft.PowerShell.Commands.WriteErrorException,invokeTest
+
+-- Running data test for '_ASim_NetworkSession_AzureFirewallV01'
+invokeTest : Microsoft.Azure.OperationalInsights.Models.ErrorResponse
+Code=BadArgumentError, Message=The request had some invalid properties
+  Code=SemanticError, Message=A semantic error occurred.
+    Code=SEM0100, Message='where' operator: Failed to resolve scalar expression named 'msg_s'
+At C:\GitHub\Azure-Sentinel\.script\tests\asimTest\convertYamlToLetStatements.ps1:24 char:9
++         invokeTest $dataTest  $this.Name "data"
++         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (:) [Write-Error], WriteErrorException
+    + FullyQualifiedErrorId : Microsoft.PowerShell.Commands.WriteErrorException,invokeTest
+
+Testing parser- '_ASim_NetworkSession_AzureNSGV01'
+-- Running schema test for '_ASim_NetworkSession_AzureNSGV01'
+invokeTest : Microsoft.Azure.OperationalInsights.Models.ErrorResponse
+Code=BadArgumentError, Message=The request had some invalid properties
+  Code=SemanticError, Message=A semantic error occurred.
+    Code=SEM0100, Message='where' operator: Failed to resolve table or column expression named
+'AzureNetworkAnalytics_CL'
+At C:\GitHub\Azure-Sentinel\.script\tests\asimTest\convertYamlToLetStatements.ps1:20 char:9
++         invokeTest $schemaTest $this.Name "schema"
++         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (:) [Write-Error], WriteErrorException
+    + FullyQualifiedErrorId : Microsoft.PowerShell.Commands.WriteErrorException,invokeTest
+
+-- Running data test for '_ASim_NetworkSession_AzureNSGV01'
+invokeTest : Microsoft.Azure.OperationalInsights.Models.ErrorResponse
+Code=BadArgumentError, Message=The request had some invalid properties
+  Code=SemanticError, Message=A semantic error occurred.
+    Code=SEM0100, Message='where' operator: Failed to resolve table or column expression named
+'AzureNetworkAnalytics_CL'
+At C:\GitHub\Azure-Sentinel\.script\tests\asimTest\convertYamlToLetStatements.ps1:24 char:9
++         invokeTest $dataTest  $this.Name "data"
++         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (:) [Write-Error], WriteErrorException
+    + FullyQualifiedErrorId : Microsoft.PowerShell.Commands.WriteErrorException,invokeTest
+
+Testing parser- '_ASim_NetworkSession_Microsoft365DefenderV02'
+-- Running schema test for '_ASim_NetworkSession_Microsoft365DefenderV02'
+invokeTest :
+_ASim_NetworkSession_Microsoft365DefenderV02 schema- test failed with 1 errors:
+(0) Error: type mismatch for column [Hostname]. It is currently dynamic and should be string
+At C:\GitHub\Azure-Sentinel\.script\tests\asimTest\convertYamlToLetStatements.ps1:20 char:9
++         invokeTest $schemaTest $this.Name "schema"
++         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (:) [Write-Error], WriteErrorException
+    + FullyQualifiedErrorId : Microsoft.PowerShell.Commands.WriteErrorException,invokeTest
+
+-- Running data test for '_ASim_NetworkSession_Microsoft365DefenderV02'
+  -- _ASim_NetworkSession_Microsoft365DefenderV02 data test done successfully
+Testing parser- '_ASim_NetworkSession_LinuxSysmonV02'
+-- Running schema test for '_ASim_NetworkSession_LinuxSysmonV02'
+  -- _ASim_NetworkSession_LinuxSysmonV02 schema test done successfully
+-- Running data test for '_ASim_NetworkSession_LinuxSysmonV02'
+  -- _ASim_NetworkSession_LinuxSysmonV02 data test done successfully
+Testing parser- '_ASim_NetworkSession_MD4IoTV02'
+-- Running schema test for '_ASim_NetworkSession_MD4IoTV02'
+invokeTest : Microsoft.Azure.OperationalInsights.Models.ErrorResponse
+Code=BadArgumentError, Message=The request had some invalid properties
+  Code=SemanticError, Message=A semantic error occurred.
+    Code=SEM0100, Message='where' operator: Failed to resolve table or column expression named 'SecurityIoTRawEvent'
+At C:\GitHub\Azure-Sentinel\.script\tests\asimTest\convertYamlToLetStatements.ps1:20 char:9
++         invokeTest $schemaTest $this.Name "schema"
++         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (:) [Write-Error], WriteErrorException
+    + FullyQualifiedErrorId : Microsoft.PowerShell.Commands.WriteErrorException,invokeTest
+
+-- Running data test for '_ASim_NetworkSession_MD4IoTV02'
+invokeTest : Microsoft.Azure.OperationalInsights.Models.ErrorResponse
+Code=BadArgumentError, Message=The request had some invalid properties
+  Code=SemanticError, Message=A semantic error occurred.
+    Code=SEM0100, Message='where' operator: Failed to resolve table or column expression named 'SecurityIoTRawEvent'
+At C:\GitHub\Azure-Sentinel\.script\tests\asimTest\convertYamlToLetStatements.ps1:24 char:9
++         invokeTest $dataTest  $this.Name "data"
++         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (:) [Write-Error], WriteErrorException
+    + FullyQualifiedErrorId : Microsoft.PowerShell.Commands.WriteErrorException,invokeTest
+
+Testing parser- '_ASim_NetworkSession_MicrosoftWindowsEventFirewallV03'
+-- Running schema test for '_ASim_NetworkSession_MicrosoftWindowsEventFirewallV03'
+  -- _ASim_NetworkSession_MicrosoftWindowsEventFirewallV03 schema test done successfully
+-- Running data test for '_ASim_NetworkSession_MicrosoftWindowsEventFirewallV03'
+  -- _ASim_NetworkSession_MicrosoftWindowsEventFirewallV03 data test done successfully
+Testing parser- '_ASim_NetworkSession_PaloAltoCEFV05'
+-- Running schema test for '_ASim_NetworkSession_PaloAltoCEFV05'
+  -- _ASim_NetworkSession_PaloAltoCEFV05 schema test done successfully
+-- Running data test for '_ASim_NetworkSession_PaloAltoCEFV05'
+  -- _ASim_NetworkSession_PaloAltoCEFV05 data test done successfully
+Testing parser- '_ASim_NetworkSession_VectraAIV01'
+-- Running schema test for '_ASim_NetworkSession_VectraAIV01'
+invokeTest : Microsoft.Azure.OperationalInsights.Models.ErrorResponse
+Code=BadArgumentError, Message=The request had some invalid properties
+  Code=SemanticError, Message=A semantic error occurred.
+    Code=SEM0001, Message=project-rename: Failed to resolve column reference 'hostname_s'
+At C:\GitHub\Azure-Sentinel\.script\tests\asimTest\convertYamlToLetStatements.ps1:20 char:9
++         invokeTest $schemaTest $this.Name "schema"
++         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (:) [Write-Error], WriteErrorException
+    + FullyQualifiedErrorId : Microsoft.PowerShell.Commands.WriteErrorException,invokeTest
+
+-- Running data test for '_ASim_NetworkSession_VectraAIV01'
+invokeTest : Microsoft.Azure.OperationalInsights.Models.ErrorResponse
+Code=BadArgumentError, Message=The request had some invalid properties
+  Code=SemanticError, Message=A semantic error occurred.
+    Code=SEM0001, Message=project-rename: Failed to resolve column reference 'hostname_s'
+At C:\GitHub\Azure-Sentinel\.script\tests\asimTest\convertYamlToLetStatements.ps1:24 char:9
++         invokeTest $dataTest  $this.Name "data"
++         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (:) [Write-Error], WriteErrorException
+    + FullyQualifiedErrorId : Microsoft.PowerShell.Commands.WriteErrorException,invokeTest
+
+Testing parser- '_ASim_NetworkSession_VMConnectionV01'
+-- Running schema test for '_ASim_NetworkSession_VMConnectionV01'
+invokeTest : Microsoft.Azure.OperationalInsights.Models.ErrorResponse
+Code=BadArgumentError, Message=The request had some invalid properties
+  Code=SemanticError, Message=A semantic error occurred.
+    Code=SEM0100, Message='where' operator: Failed to resolve table or column expression named 'VMConnection'
+At C:\GitHub\Azure-Sentinel\.script\tests\asimTest\convertYamlToLetStatements.ps1:20 char:9
++         invokeTest $schemaTest $this.Name "schema"
++         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (:) [Write-Error], WriteErrorException
+    + FullyQualifiedErrorId : Microsoft.PowerShell.Commands.WriteErrorException,invokeTest
+
+-- Running data test for '_ASim_NetworkSession_VMConnectionV01'
+invokeTest : Microsoft.Azure.OperationalInsights.Models.ErrorResponse
+Code=BadArgumentError, Message=The request had some invalid properties
+  Code=SemanticError, Message=A semantic error occurred.
+    Code=SEM0100, Message='where' operator: Failed to resolve table or column expression named 'VMConnection'
+At C:\GitHub\Azure-Sentinel\.script\tests\asimTest\convertYamlToLetStatements.ps1:24 char:9
++         invokeTest $dataTest  $this.Name "data"
++         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (:) [Write-Error], WriteErrorException
+    + FullyQualifiedErrorId : Microsoft.PowerShell.Commands.WriteErrorException,invokeTest
+
+Testing parser- '_ASim_NetworkSession_ZscalerZIAV02'
+-- Running schema test for '_ASim_NetworkSession_ZscalerZIAV02'
+  -- _ASim_NetworkSession_ZscalerZIAV02 schema test done successfully
+-- Running data test for '_ASim_NetworkSession_ZscalerZIAV02'
+  -- _ASim_NetworkSession_ZscalerZIAV02 data test done successfully
+The parser '_Im_NetworkSessionV06' is a main parser, ignoring it
+Testing parser- '_Im_NetworkSession_AWSVPCV01'
+-- Running schema test for '_Im_NetworkSession_AWSVPCV01'
+  -- _Im_NetworkSession_AWSVPCV01 schema test done successfully
+-- Running data test for '_Im_NetworkSession_AWSVPCV01'
+  -- _Im_NetworkSession_AWSVPCV01 data test done successfully
+Testing parser- '_Im_NetworkSession_AzureFirewallV01'
+-- Running schema test for '_Im_NetworkSession_AzureFirewallV01'
+invokeTest : Microsoft.Azure.OperationalInsights.Models.ErrorResponse
+Code=BadArgumentError, Message=The request had some invalid properties
+  Code=SemanticError, Message=A semantic error occurred.
+    Code=SEM0100, Message='where' operator: Failed to resolve scalar expression named 'msg_s'
+At C:\GitHub\Azure-Sentinel\.script\tests\asimTest\convertYamlToLetStatements.ps1:20 char:9
++         invokeTest $schemaTest $this.Name "schema"
++         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (:) [Write-Error], WriteErrorException
+    + FullyQualifiedErrorId : Microsoft.PowerShell.Commands.WriteErrorException,invokeTest
+
+-- Running data test for '_Im_NetworkSession_AzureFirewallV01'
+invokeTest : Microsoft.Azure.OperationalInsights.Models.ErrorResponse
+Code=BadArgumentError, Message=The request had some invalid properties
+  Code=SemanticError, Message=A semantic error occurred.
+    Code=SEM0100, Message='where' operator: Failed to resolve scalar expression named 'msg_s'
+At C:\GitHub\Azure-Sentinel\.script\tests\asimTest\convertYamlToLetStatements.ps1:24 char:9
++         invokeTest $dataTest  $this.Name "data"
++         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (:) [Write-Error], WriteErrorException
+    + FullyQualifiedErrorId : Microsoft.PowerShell.Commands.WriteErrorException,invokeTest
+
+Testing parser- '_Im_NetworkSession_AzureNSGV01'
+-- Running schema test for '_Im_NetworkSession_AzureNSGV01'
+invokeTest : Microsoft.Azure.OperationalInsights.Models.ErrorResponse
+Code=BadArgumentError, Message=The request had some invalid properties
+  Code=SemanticError, Message=A semantic error occurred.
+    Code=SEM0100, Message='where' operator: Failed to resolve table or column expression named
+'AzureNetworkAnalytics_CL'
+At C:\GitHub\Azure-Sentinel\.script\tests\asimTest\convertYamlToLetStatements.ps1:20 char:9
++         invokeTest $schemaTest $this.Name "schema"
++         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (:) [Write-Error], WriteErrorException
+    + FullyQualifiedErrorId : Microsoft.PowerShell.Commands.WriteErrorException,invokeTest
+
+-- Running data test for '_Im_NetworkSession_AzureNSGV01'
+invokeTest : Microsoft.Azure.OperationalInsights.Models.ErrorResponse
+Code=BadArgumentError, Message=The request had some invalid properties
+  Code=SemanticError, Message=A semantic error occurred.
+    Code=SEM0100, Message='where' operator: Failed to resolve table or column expression named
+'AzureNetworkAnalytics_CL'
+At C:\GitHub\Azure-Sentinel\.script\tests\asimTest\convertYamlToLetStatements.ps1:24 char:9
++         invokeTest $dataTest  $this.Name "data"
++         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (:) [Write-Error], WriteErrorException
+    + FullyQualifiedErrorId : Microsoft.PowerShell.Commands.WriteErrorException,invokeTest
+
+Testing parser- '_Im_NetworkSession_EmptyV03'
+-- Running schema test for '_Im_NetworkSession_EmptyV03'
+  -- _Im_NetworkSession_EmptyV03 schema test done successfully
+-- Running data test for '_Im_NetworkSession_EmptyV03'
+  -- _Im_NetworkSession_EmptyV03 data test done successfully
+Testing parser- '_Im_NetworkSession_Microsoft365DefenderV02'
+-- Running schema test for '_Im_NetworkSession_Microsoft365DefenderV02'
+  -- _Im_NetworkSession_Microsoft365DefenderV02 schema test done successfully
+-- Running data test for '_Im_NetworkSession_Microsoft365DefenderV02'
+  -- _Im_NetworkSession_Microsoft365DefenderV02 data test done successfully
+Testing parser- '_Im_NetworkSession_LinuxSysmonV02'
+-- Running schema test for '_Im_NetworkSession_LinuxSysmonV02'
+  -- _Im_NetworkSession_LinuxSysmonV02 schema test done successfully
+-- Running data test for '_Im_NetworkSession_LinuxSysmonV02'
+  -- _Im_NetworkSession_LinuxSysmonV02 data test done successfully
+Testing parser- '_Im_NetworkSession_MD4IoTV02'
+-- Running schema test for '_Im_NetworkSession_MD4IoTV02'
+invokeTest : Microsoft.Azure.OperationalInsights.Models.ErrorResponse
+Code=BadArgumentError, Message=The request had some invalid properties
+  Code=SemanticError, Message=A semantic error occurred.
+    Code=SEM0100, Message='where' operator: Failed to resolve table or column expression named 'SecurityIoTRawEvent'
+At C:\GitHub\Azure-Sentinel\.script\tests\asimTest\convertYamlToLetStatements.ps1:20 char:9
++         invokeTest $schemaTest $this.Name "schema"
++         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (:) [Write-Error], WriteErrorException
+    + FullyQualifiedErrorId : Microsoft.PowerShell.Commands.WriteErrorException,invokeTest
+
+-- Running data test for '_Im_NetworkSession_MD4IoTV02'
+invokeTest : Microsoft.Azure.OperationalInsights.Models.ErrorResponse
+Code=BadArgumentError, Message=The request had some invalid properties
+  Code=SemanticError, Message=A semantic error occurred.
+    Code=SEM0100, Message='where' operator: Failed to resolve table or column expression named 'SecurityIoTRawEvent'
+At C:\GitHub\Azure-Sentinel\.script\tests\asimTest\convertYamlToLetStatements.ps1:24 char:9
++         invokeTest $dataTest  $this.Name "data"
++         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (:) [Write-Error], WriteErrorException
+    + FullyQualifiedErrorId : Microsoft.PowerShell.Commands.WriteErrorException,invokeTest
+
+Testing parser- '_Im_NetworkSession_MicrosoftWindowsEventFirewallV03'
+-- Running schema test for '_Im_NetworkSession_MicrosoftWindowsEventFirewallV03'
+  -- _Im_NetworkSession_MicrosoftWindowsEventFirewallV03 schema test done successfully
+-- Running data test for '_Im_NetworkSession_MicrosoftWindowsEventFirewallV03'
+  -- _Im_NetworkSession_MicrosoftWindowsEventFirewallV03 data test done successfully
+Testing parser- '_Im_NetworkSession_PaloAltoCEFV06'
+-- Running schema test for '_Im_NetworkSession_PaloAltoCEFV06'
+  -- _Im_NetworkSession_PaloAltoCEFV06 schema test done successfully
+-- Running data test for '_Im_NetworkSession_PaloAltoCEFV06'
+  -- _Im_NetworkSession_PaloAltoCEFV06 data test done successfully
+Testing parser- '_Im_NetworkSession_VectraAIV01'
+-- Running schema test for '_Im_NetworkSession_VectraAIV01'
+invokeTest : Microsoft.Azure.OperationalInsights.Models.ErrorResponse
+Code=BadArgumentError, Message=The request had some invalid properties
+  Code=SemanticError, Message=A semantic error occurred.
+    Code=SEM0100, Message='where' operator: Failed to resolve table or column or scalar expression named
+'resp_domain_s'
+At C:\GitHub\Azure-Sentinel\.script\tests\asimTest\convertYamlToLetStatements.ps1:20 char:9
++         invokeTest $schemaTest $this.Name "schema"
++         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (:) [Write-Error], WriteErrorException
+    + FullyQualifiedErrorId : Microsoft.PowerShell.Commands.WriteErrorException,invokeTest
+
+-- Running data test for '_Im_NetworkSession_VectraAIV01'
+invokeTest : Microsoft.Azure.OperationalInsights.Models.ErrorResponse
+Code=BadArgumentError, Message=The request had some invalid properties
+  Code=SemanticError, Message=A semantic error occurred.
+    Code=SEM0100, Message='where' operator: Failed to resolve table or column or scalar expression named
+'resp_domain_s'
+At C:\GitHub\Azure-Sentinel\.script\tests\asimTest\convertYamlToLetStatements.ps1:24 char:9
++         invokeTest $dataTest  $this.Name "data"
++         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (:) [Write-Error], WriteErrorException
+    + FullyQualifiedErrorId : Microsoft.PowerShell.Commands.WriteErrorException,invokeTest
+
+Testing parser- '_Im_NetworkSession_VMConnectionV01'
+-- Running schema test for '_Im_NetworkSession_VMConnectionV01'
+invokeTest : Microsoft.Azure.OperationalInsights.Models.ErrorResponse
+Code=BadArgumentError, Message=The request had some invalid properties
+  Code=SemanticError, Message=A semantic error occurred.
+    Code=SEM0100, Message='where' operator: Failed to resolve table or column expression named 'VMConnection'
+At C:\GitHub\Azure-Sentinel\.script\tests\asimTest\convertYamlToLetStatements.ps1:20 char:9
++         invokeTest $schemaTest $this.Name "schema"
++         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (:) [Write-Error], WriteErrorException
+    + FullyQualifiedErrorId : Microsoft.PowerShell.Commands.WriteErrorException,invokeTest
+
+-- Running data test for '_Im_NetworkSession_VMConnectionV01'
+invokeTest : Microsoft.Azure.OperationalInsights.Models.ErrorResponse
+Code=BadArgumentError, Message=The request had some invalid properties
+  Code=SemanticError, Message=A semantic error occurred.
+    Code=SEM0100, Message='where' operator: Failed to resolve table or column expression named 'VMConnection'
+At C:\GitHub\Azure-Sentinel\.script\tests\asimTest\convertYamlToLetStatements.ps1:24 char:9
++         invokeTest $dataTest  $this.Name "data"
++         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (:) [Write-Error], WriteErrorException
+    + FullyQualifiedErrorId : Microsoft.PowerShell.Commands.WriteErrorException,invokeTest
+
+Testing parser- '_Im_NetworkSession_ZscalerZIAV02'
+-- Running schema test for '_Im_NetworkSession_ZscalerZIAV02'
+  -- _Im_NetworkSession_ZscalerZIAV02 schema test done successfully
+-- Running data test for '_Im_NetworkSession_ZscalerZIAV02'
+  -- _Im_NetworkSession_ZscalerZIAV02 data test done successfully

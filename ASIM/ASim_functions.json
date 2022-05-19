@@ -1,0 +1,122 @@
+[
+  {
+    "id": "17b2f291-71ec-5439-985c-8604befdb23e",
+    "name": "_ASIM_IsDisabledParser",
+    "parameters": "CallerContext:string, SourceSpecificParser:string",
+    "description": "An ASIM Function to check if a parser is disabled",
+    "bodyFilePath": "KQL/Common/_ASIM_IsDisabledParser.kql",
+    "solutions": ["SecurityInsights"],
+    "tags": {},
+    "properties": {}
+  },
+  {
+    "id": "36a1bf66-3208-5df0-9964-04ec9bb2ea98",
+    "name": "_ASIM_GetSourceBySourceType",
+    "parameters": "SourceType:string",
+    "description": "An ASIM Function to get the the list of sources for an ASIM source type.",
+    "bodyFilePath": "KQL/Common/_ASIM_GetSourceBySourceType.kql",
+    "solutions": ["SecurityInsights"],
+    "tags": {},
+    "properties": {}
+  },
+  {
+    "id": "204f34dc-7f37-51a4-838f-2923c7a44d4a",
+    "name": "_ASIM_GetWatchlistRaw",
+    "parameters": "watchlist:string, keys:dynamic = dynamic([])",
+    "description": "An ASIM Function to get the ASimDisabledParsers watchlist",
+    "bodyFilePath": "KQL/Common/_ASIM_GetWatchlistRaw.kql",
+    "solutions": ["SecurityInsights"],
+    "tags": {},
+    "properties": {}
+  },
+  {
+    "id": "93080d07-4718-5013-8687-211643d0f4aa",
+    "name": "_ASIM_GetWatchlistsRaw",
+    "parameters": "watchlists:dynamic, keys:dynamic = dynamic([])",
+    "description": "An ASIM Function to get multiple watchlists in raw format.",
+    "bodyFilePath": "KQL/Common/_ASIM_GetWatchlistsRaw.kql",
+    "solutions": ["SecurityInsights"],
+    "tags": {},
+    "properties": {}
+  },
+  {
+    "id": "a3969e5c-574a-526d-937a-f347c8c77929",
+    "name": "_ASIM_LookupDnsQueryType",
+    "parameters": "QueryType:int",
+    "description": "An ASIM Function to get the DNS query type name (resource record type) based on a numerical query type",
+    "bodyFilePath": "KQL/Common/_ASIM_LookupDnsQueryType.kql",
+    "solutions": ["SecurityInsights"],
+    "tags": {},
+    "properties": {}
+  },
+  {
+    "id": "cf296479-dace-5fb4-906c-a270dcee23d8",
+    "name": "_ASIM_LookupDnsResponseCode",
+    "parameters": "ResponseCode:int",
+    "description": "An ASIM Function to get the DNS response code name based on a numerical response code",
+    "bodyFilePath": "KQL/Common/_ASIM_LookupDnsResponseCode.kql",
+    "solutions": ["SecurityInsights"],
+    "tags": {},
+    "properties": {}
+  },
+  {
+    "id": "e316c508-8b3f-5198-88b0-8fd97672a930",
+    "name": "_ASIM_ResolveDnsQueryType",
+    "parameters": "T:(TimeGenerated:datetime), field:string",
+    "description": "An ASIM Function sets DnsQueryType and DnsQueryTypeName based on an resource record code provided as a parameter",
+    "bodyFilePath": "KQL/Common/_ASIM_ResolveDnsQueryType.kql",
+    "solutions": ["SecurityInsights"],
+    "tags": {},
+    "properties": {}
+  },
+  {
+    "id": "c6259971-9108-5987-9e17-56cf8fc1ae52",
+    "name": "_ASIM_ResolveDnsResponseCode",
+    "parameters": "T:(TimeGenerated:datetime), field:string",
+    "description": "An ASIM Function sets DnsResponseCode and DnsResponseCodeName based on an RCode provided as a parameter",
+    "bodyFilePath": "KQL/Common/_ASIM_ResolveDnsResponseCode.kql",
+    "solutions": ["SecurityInsights"],
+    "tags": {},
+    "properties": {}
+  },
+  {
+    "id": "d2f30bd8-b742-50ac-b597-8e87631d5ab5",
+    "name": "_ASIM_ResolveDstFQDN",
+    "parameters": "T:(TimeGenerated:datetime), field:string",
+    "description": "An ASIM Function sets DstHostname, DstDomain, DstDomainType and DstFQDN based for an FQDN or hostname provided as a parameter",
+    "bodyFilePath": "KQL/Common/_ASIM_ResolveDstFQDN.kql",
+    "solutions": ["SecurityInsights"],
+    "tags": {},
+    "properties": {}
+  },
+  {
+    "id": "7deeb113-dcc0-59d7-87cb-c24333c61527",
+    "name": "_ASIM_ResolveDvcFQDN",
+    "parameters": "T:(TimeGenerated:datetime), field:string",
+    "description": "An ASIM Function sets DvcHostname, DvcDomain, DvcDomainType and DvcFQDN based for an FQDN or hostname provided as a parameter",
+    "bodyFilePath": "KQL/Common/_ASIM_ResolveDvcFQDN.kql",
+    "solutions": ["SecurityInsights"],
+    "tags": {},
+    "properties": {}
+  },
+  {
+    "id": "73f523ef-c4c8-5d6d-8344-e4426d763242",
+    "name": "_ASIM_ResolveFQDN",
+    "parameters": "T:(TimeGenerated:datetime), field:string",
+    "description": "An ASIM Function sets Hostname, Domain, DomainType and FQDN based for an FQDN or hostname provided as a parameter",
+    "bodyFilePath": "KQL/Common/_ASIM_ResolveFQDN.kql",
+    "solutions": ["SecurityInsights"],
+    "tags": {},
+    "properties": {}
+  },
+  {
+    "id": "93c664d8-6aca-5fba-84dc-93e372845c58",
+    "name": "_ASIM_ResolveSrcFQDN",
+    "parameters": "T:(TimeGenerated:datetime), field:string",
+    "description": "An ASIM Function sets SrcHostname, SrcDomain, SrcDomainType and SrcFQDN based for an FQDN or hostname provided as a parameter",
+    "bodyFilePath": "KQL/Common/_ASIM_ResolveSrcFQDN.kql",
+    "solutions": ["SecurityInsights"],
+    "tags": {},
+    "properties": {}
+  }
+]

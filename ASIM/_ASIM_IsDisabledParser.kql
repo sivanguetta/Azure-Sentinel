@@ -1,0 +1,10 @@
+let function = (CallerContext:string, SourceSpecificParser:string) {
+  let DisabledParsers = materialize (
+    _ASIM_GetWatchlistRaw (watchlist='ASimDisabledParsers', pack_array('Any',CallerContext))
+    | extend SourceSpecificParser = tostring(WatchlistItem.SourceSpecificParser)
+    | distinct SourceSpecificParser 
+    | where isnotempty(SourceSpecificParser)
+  );
+  toscalar(SourceSpecificParser in (DisabledParsers) or 'Any' in (DisabledParsers))
+};
+function (CallerContext, SourceSpecificParser)
