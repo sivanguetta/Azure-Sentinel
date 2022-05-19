@@ -29,3 +29,5 @@ jobs:
               $x = Get-ChildItem -Path .
               & ".script/tests/asimTest/convertYamlToLetStatements.ps1"
              azPSVersion: "latest"
+             errorActionPreference : continue
+             failOnStandardError: false
