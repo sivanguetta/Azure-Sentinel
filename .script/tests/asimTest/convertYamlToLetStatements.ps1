@@ -16,11 +16,11 @@ Class Parser {
         $parserAsletStatement = "let $($letStatementName)= ($(getParameters($this.Parameters))) { $($this.OriginalQuery) };"
 
         Write-Host "-- Running schema test for '$($this.Name)'"
-        $schemaTest = "$($parserAsletStatement)`n$($letStatementName) | getschema | invoke ASimSchemaTester('$($this.Schema)')"
+        $schemaTest = "$($parserAsletStatement)`r`n$($letStatementName) | getschema | invoke ASimSchemaTester('$($this.Schema)')"
         invokeTest $schemaTest $this.Name "schema"
 
         Write-Host "-- Running data test for '$($this.Name)'"
-        $dataTest = "$($parserAsletStatement)`n$($letStatementName) | invoke ASimDataTester('$($this.Schema)')"
+        $dataTest = "$($parserAsletStatement)`r`n$($letStatementName) | invoke ASimDataTester('$($this.Schema)')"
         invokeTest $dataTest  $this.Name "data"
     }
 }
@@ -33,8 +33,8 @@ function invokeTest([string] $test, [string] $name, [string] $kind) {
         if ($rawResults.Results) {
             $resultsArray = [System.Linq.Enumerable]::ToArray($rawResults.Results)
             if ($resultsArray.count) {  
-                $errorMessage = "`n$($name) $($kind)- test failed with $($resultsArray.count) errors:`n"        
-                $resultsArray | ForEach-Object { $errorMessage += "$($_.Result)`n" } 
+                $errorMessage = "`r`n$($name) $($kind)- test failed with $($resultsArray.count) errors:`r`n"        
+                $resultsArray | ForEach-Object { $errorMessage += "$($_.Result)`r`n" } 
                 Write-Error $errorMessage
             }
             else {
@@ -43,7 +43,7 @@ function invokeTest([string] $test, [string] $name, [string] $kind) {
         }    
     }
     catch {
-        Write-Error $_.Exception._Message
+        Write-Error $_
     }  
 }
 
