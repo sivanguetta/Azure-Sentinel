@@ -43,7 +43,7 @@ function invokeTest([string] $test, [string] $name, [string] $kind) {
         }    
     }
     catch {
-        Write-Error $_
+        Write-Error $_Exception.Message
     }  
 }
 
