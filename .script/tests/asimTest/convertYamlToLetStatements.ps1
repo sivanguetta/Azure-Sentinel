@@ -56,7 +56,7 @@ function run {
 }
 
 function testSchema([string] $schema) {
-    $parsersObjects = & "./ConvertYamlToObject.ps1" -Path "../../../Parsers/ASim$($schema)/Parsers"
+    $parsersObjects = & "./.script/tests/asimTest/ConvertYamlToObject.ps1" -Path "./Parsers/ASim$($schema)/Parsers"
     Write-Host "Testing $($schema) schema, $($parsersObjects.count) parsers were found"
     $parsersObjects | ForEach-Object {
         $functionName = "$($_.EquivalentBuiltInParser)V$($_.Parser.Version.Replace('.',''))"
