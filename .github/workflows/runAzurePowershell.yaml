@@ -11,6 +11,8 @@ jobs:
   Windows-latest:
       runs-on: windows-latest
       steps:
+        - name: Check out repo        
+          uses: actions/checkout@v2
         - name: OIDC Login to Azure Public Cloud with AzPowershell (enableAzPSSession true)
           uses: azure/login@v1
           with:
@@ -18,7 +20,6 @@ jobs:
             tenant-id: ${{ secrets.AZURE_TENANT_ID }}
             subscription-id: ${{ secrets.AZURE_SUBSCRIPTION_ID }} 
             enable-AzPSSession: true
-
         - name: 'Get resource group with PowerShell action'
           uses: azure/powershell@v1
           with:
@@ -26,5 +27,5 @@ jobs:
               echo "Get-ChildItem -Path ."
               Get-ChildItem -Path .
               $x = Get-ChildItem -Path .
-              & "./convertYamlToLetStatements.ps1"
+              & ".script/tests/asimTest/convertYamlToLetStatements.ps1"
              azPSVersion: "latest"
