@@ -1,3 +1,5 @@
+$global:failed=0
+
 Class Parser {
     [string] $Name;
     [string] $OriginalQuery;
@@ -36,6 +38,7 @@ function invokeTest([string] $test, [string] $name, [string] $kind) {
                 $errorMessage = "`r`n$($name) $($kind)- test failed with $($resultsArray.count) errors:`r`n"        
                 $resultsArray | ForEach-Object { $errorMessage += "$($_.Result)`r`n" } 
                 Write-Error $errorMessage
+                $global:failed=1
             }
             else {
                 Write-Host "  -- $($name) $($kind) test done successfully"
@@ -43,7 +46,8 @@ function invokeTest([string] $test, [string] $name, [string] $kind) {
         }    
     }
     catch {
-        Write-Error $_Exception.Message
+        Write-Error $_
+        $global:failed=1
     }  
 }
 
@@ -55,7 +59,7 @@ function run {
 }
 
 function testSchema([string] $schema) {
-    # $parsersObjects = convertYamlToObject("../../../Parsers/ASim$($schema)/Parsers")
+    # parsersObjects = convertYamlToObject("../../../Parsers/ASim$($schema)/Parsers")
     $parsersObjects = convertYamlToObject("./Parsers/ASim$($schema)/Parsers")
     Write-Host "Testing $($schema) schema, $($parsersObjects.count) parsers were found"
     $parsersObjects | ForEach-Object {
@@ -126,3 +130,4 @@ function convertYamlToObject([System.IO.FileInfo] $Path) {
 }
 
 run
+exit $global:failed
