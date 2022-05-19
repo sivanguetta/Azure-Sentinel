@@ -29,7 +29,7 @@ function invokeTest([string] $test, [string] $name, [string] $kind) {
     $query = $test + " | where Result startswith '(0) Error:'"
     try {
         # $rawResults = Invoke-AzureRmOperationalInsightsQuery -WorkspaceId "6b57e303-6aa4-4f18-b3ba-b2f816756897" -Query $query -ErrorAction Stop
-        $rawResults = Invoke-AzureRmOperationalInsightsQuery -WorkspaceId "059f037c-1b3b-42b1-bb90-e340e8c3142c" -Query $query -ErrorAction Stop
+        $rawResults = Invoke-AzOperationalInsightsQuery -WorkspaceId "059f037c-1b3b-42b1-bb90-e340e8c3142c" -Query $query -ErrorAction Stop
         if ($rawResults.Results)
         {
             $resultsArray = [System.Linq.Enumerable]::ToArray($rawResults.Results)
@@ -50,7 +50,7 @@ function invokeTest([string] $test, [string] $name, [string] $kind) {
 
 function run {
     # $subscription = Select-AzureRmSubscription -SubscriptionId "de5fb112-5d5d-42d4-a9ea-5f3b1359c6a6"
-    $subscription = Select-AzureRmSubscription -SubscriptionId "419581d6-4853-49bd-83b6-d94bb8a77887"
+    $subscription = Select-AzSubscription -SubscriptionId "419581d6-4853-49bd-83b6-d94bb8a77887"
     $schemas = ("DNS", "WebSession", "NetworkSession");
     $schemas | ForEach-Object { testSchema($_) }
 }
