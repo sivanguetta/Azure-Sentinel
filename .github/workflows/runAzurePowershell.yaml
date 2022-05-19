@@ -35,5 +35,5 @@ jobs:
               $a = Get-ChildItem -Path "./.script/tests/asimTest"
               Get-ChildItem -Path "./.script/tests/asimTest"
               echo $a
-              & ".script/tests/asimTest/convertYamlToLetStatements.ps1"
+              & "./convertYamlToLetStatements.ps1"
              azPSVersion: "latest"
