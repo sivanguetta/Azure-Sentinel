@@ -1,4 +1,4 @@
-Class Parser{
+Class Parser {
     [string] $Name;
     [string] $OriginalQuery;
     [string] $Schema;
@@ -30,22 +30,21 @@ function invokeTest([string] $test, [string] $name, [string] $kind) {
     try {
         # $rawResults = Invoke-AzureRmOperationalInsightsQuery -WorkspaceId "6b57e303-6aa4-4f18-b3ba-b2f816756897" -Query $query -ErrorAction Stop
         $rawResults = Invoke-AzOperationalInsightsQuery -WorkspaceId "059f037c-1b3b-42b1-bb90-e340e8c3142c" -Query $query -ErrorAction Stop
-        if ($rawResults.Results)
-        {
+        if ($rawResults.Results) {
             $resultsArray = [System.Linq.Enumerable]::ToArray($rawResults.Results)
             if ($resultsArray.count) {  
                 $errorMessage = "`n$($name) $($kind)- test failed with $($resultsArray.count) errors:`n"        
                 $resultsArray | ForEach-Object { $errorMessage += "$($_.Result)`n" } 
                 Write-Error $errorMessage
-            } else {
+            }
+            else {
                 Write-Host "  -- $($name) $($kind) test done successfully"
             }
         }    
-    } catch {
-        Write-Error $_.Exception
     }
-
-    
+    catch {
+        Write-Error $_.Exception._Message
+    }  
 }
 
 function run {
@@ -56,36 +55,74 @@ function run {
 }
 
 function testSchema([string] $schema) {
-    $parsersObjects = & "./.script/tests/asimTest/ConvertYamlToObject.ps1" -Path "./Parsers/ASim$($schema)/Parsers"
+    # $parsersObjects = convertYamlToObject("../../../Parsers/ASim$($schema)/Parsers")
+    $parsersObjects = convertYamlToObject("./Parsers/ASim$($schema)/Parsers")
     Write-Host "Testing $($schema) schema, $($parsersObjects.count) parsers were found"
     $parsersObjects | ForEach-Object {
         $functionName = "$($_.EquivalentBuiltInParser)V$($_.Parser.Version.Replace('.',''))"
-        if ($_.Parsers){
+        if ($_.Parsers) {
             Write-Host "The parser '$($functionName)' is a main parser, ignoring it"
-        } else {
+        }
+        else {
             $parser = [Parser]::new($functionName, $_.ParserQuery, $schema, $_.ParserParams)
             $parser.Test()
         }
     }
 }
 
-function getParameters {
-    param (
-        [System.Collections.Generic.List`1[System.Object]] $parserParams
-    )
-
+function getParameters([System.Collections.Generic.List`1[System.Object]] $parserParams) {
     $paramsArray = @()
-    if ($parserParams){
+    if ($parserParams) {
         $parserParams | ForEach-Object {
             if ($_.Type -eq "string") {
                 $_.Default = "'{0}'" -f $_.Default
             }
-            $paramsArray += ("{0}:{1}= {2}" -f $_.Name,$_.Type,$_.Default)
+            $paramsArray += ("{0}:{1}= {2}" -f $_.Name, $_.Type, $_.Default)
         }
 
         return $paramsArray -join ','
     }
     return $paramsString
+}
+
+function convertYamlToObject([System.IO.FileInfo] $Path) {
+    if (Get-Module -ListAvailable -Name powershell-yaml) {
+        Write-Verbose "Module already installed"
+    }
+    else {
+        Write-Verbose "Installing PowerShell-YAML module"
+        try {
+            Install-Module powershell-yaml -AllowClobber -Force -ErrorAction Stop
+            Import-Module powershell-yaml
+        }
+        catch {
+            Write-Error $_.Exception.Message
+            break
+        }
+    }
+
+    try {
+        $content = Get-ChildItem -Path $Path -Filter *.yaml -Recurse -ErrorAction Stop
+    }
+    catch {
+        Write-Error $_.Exception.Message
+    }
+
+    if ($content) {
+        Write-Host "'$($content.count)' templates found to convert"
+
+        $data = @()
+        $content | ForEach-Object {
+            $convert = $_ | Get-Content -Raw | ConvertFrom-Yaml -ErrorAction Stop
+            $data += $convert
+
+        }
+    }
+    else {
+        Write-Error "No YAML templates found"
+        break
+    }
+    return $data
 }
 
 run
