@@ -1,11 +1,6 @@
 name: Run ASIM testers on "eco-connector-test" workspace
 on:
-  pull_request:
-    paths:
-    - 'Parsers/ASimDns/Parsers/**'
-    - 'Parsers/ASimNetworkSession/Parsers/**'
-    - 'Parsers/ASimWebSession/Parsers/**'
-    - 'Parsers/ASimProcessEvent/Parsers/**'
+  pull_request
 
 permissions:
       id-token: write
