@@ -27,7 +27,7 @@ jobs:
               echo "Get-ChildItem -Path ."
               Get-ChildItem -Path .
               $x = Get-ChildItem -Path .
-              & ".script/tests/asimTest/convertYamlToLetStatements.ps1"
+              & ".script/tests/asimTest/runAsimTesters.ps1"
              azPSVersion: "latest"
              errorActionPreference : continue
              failOnStandardError: false
