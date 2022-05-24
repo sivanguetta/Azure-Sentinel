@@ -27,7 +27,7 @@ Parsers:
   - _ASim_ProcessEvent_TerminateLinuxSysmon
   - _ASim_ProcessEvent_TerminateMicrosoftWindowsEvents
   - _ASim_ProcessEvent_CreateMicrosoftWindowsEvents
-  - _ASim_ProcessEvent_MD4IoT
+  - _ASim_ProcessEvent_MD4IoT dd
 
 ParserQuery: |
   let DisabledParsers=materialize(_GetWatchlist('ASimDisabledParsers') | where SearchKey in ('Any', 'ExcludeASimProcess') | extend SourceSpecificParser=column_ifexists('SourceSpecificParser','') | distinct SourceSpecificParser);
