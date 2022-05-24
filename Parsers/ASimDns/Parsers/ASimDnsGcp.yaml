@@ -8,7 +8,7 @@ Normalization:
   Schema: Dns
   Version: '0.1.3'
 References:
-- Title: ASIM DNS Schema
+- Title: ASIM DNS Schema3
   Link: https://aka.ms/ASimDnsDoc
 - Title: ASIM
   Link: https://aka.ms/AboutASIM
