@@ -7,7 +7,7 @@
         "EventTime":  "5/9/2022, 6:09:02.617 AM",
         "Facility":  "daemon",
         "Hostname":  "computer1.domain.org",
-        "SeverityLevel":  "info",
+        "SeverityLevel":  "info2",
         "SyslogMessage":  "client 10.120.20.198#57398 UDP: query: a2.foo.com IN A response: NOERROR +AED a2.foo.com. 28800 IN A 1.1.1.2",
         "ProcessID":  "14265",
         "HostIP":  "156.72.152.18",
